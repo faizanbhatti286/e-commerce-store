@@ -1,97 +1,96 @@
-import { IoLogoTwitter } from "react-icons/io";
-import { RiFacebookFill } from "react-icons/ri";
+import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { IoLogoGithub } from "react-icons/io5";
 import Image from "next/image";
-import NewsLetter from "@/components/newletter";
+import { CiFacebook, CiTwitter } from "react-icons/ci";
+import NewsLetter from "./newletter";
 
 export default function Footer() {
-  return (
-    <>
-      <NewsLetter />
-      <footer className="bg-[#F0F0F0] w-full h-auto pt-16 pb-8 px-4 sm:px-8 lg:px-20">
-        <div className="max-w-[1440px] mx-auto pt-12 pb-0 flex flex-col lg:flex-row justify-between items-start gap-16 lg:h-[499px] lg:space-y-0">
-          {/* Company Info Section */}
-          <div className="flex flex-col gap-4 justify-start items-start">
-            <h3 className="font-satoshi text-4xl font-bold mb-4">SHOP.CO</h3>
-            <p className="font-satoshi text-sm text-[#00000099] mb-8 max-w-xs">
-              We have clothes that suit your style and which you’re proud to wear. From women to men.
-            </p>
-            <div className="flex gap-4">
-              <div className="h-[35px] w-[35px] rounded-full bg-white flex justify-center items-center">
-                <IoLogoTwitter className="text-xl" aria-label="Twitter" />
-              </div>
-              <div className="h-[35px] w-[35px] rounded-full bg-black text-white flex justify-center items-center">
-                <RiFacebookFill className="text-xl" aria-label="Facebook" />
-              </div>
-              <div className="h-[35px] w-[35px] rounded-full bg-white flex justify-center items-center">
-                <FaInstagram className="text-xl" aria-label="Instagram" />
-              </div>
-              <div className="h-[35px] w-[35px] rounded-full bg-white flex justify-center items-center">
-                <IoLogoGithub className="text-xl" aria-label="GitHub" />
-              </div>
-            </div>
-          </div>
+    return ( 
+      <>
+        <main className="bg-[#F0F0F0] relative p-7 sm:px-7 md:px-12 w-full h-full md:h-[550px] sm:h-[846px] flex flex-col justify-start items-center mt-32">
+            {/* Adjusted the margin-top to ensure the newsletter is placed above content */}
+             <span className="absolute md:top-[-180px] sm:top-[-120px] md:mt-[-2] sm:mt-7 ">
+              <NewsLetter/>
+             </span>
 
-          {/* Links Sections */}
-          <div className="flex flex-wrap lg:w-2/3 justify-between">
-            <div className="w-full sm:w-1/2 lg:w-1/4 mb-8">
-              <h5 className="font-satoshi text-lg font-semibold mb-4 tracking-wide">COMPANY</h5>
-              <ul className="font-satoshi text-sm text-[#00000099] space-y-4">
-                <li>About</li>
-                <li>Features</li>
-                <li>Works</li>
-                <li>Career</li>
-              </ul>
-            </div>
-            <div className="w-full sm:w-1/2 lg:w-1/4 mb-8">
-              <h5 className="font-satoshi text-lg font-semibold mb-4 tracking-wide">HELP</h5>
-              <ul className="font-satoshi text-sm text-[#00000099] space-y-4">
-                <li>Customer Support</li>
-                <li>Delivery Details</li>
-                <li>Terms & Conditions</li>
-                <li>Privacy Policy</li>
-              </ul>
-            </div>
-            <div className="w-full sm:w-1/2 lg:w-1/4 mb-8">
-              <h5 className="font-satoshi text-lg font-semibold mb-4 tracking-wide">FAQ</h5>
-              <ul className="font-satoshi text-sm text-[#00000099] space-y-4">
-                <li>Account</li>
-                <li>Deliveries</li>
-                <li>Orders</li>
-                <li>Payments</li>
-              </ul>
-            </div>
-            <div className="w-full sm:w-1/2 lg:w-1/4 mb-8">
-              <h5 className="font-satoshi text-lg font-semibold mb-4 tracking-wide">RESOURCES</h5>
-              <ul className="font-satoshi text-sm text-[#00000099] space-y-4">
-                <li>Free eBooks</li>
-                <li>Developer Tutorials</li>
-                <li>How-to Blogs</li>
-                <li>YouTube Playlists</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+            <div className="w-full h-auto flex flex-col sm:flex-row md:flex-row items-start mt-32 md:mt-20 border-b-2 pt-3 pb-12">
+                {/* Top Section */}
+                <div className="w-full sm:w-full md:w-[40%] mt-5">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold">SHOP.CO</h1>
+                    <p className="mt-4 text-xl sm:text-lg md:text-xl">
+                        We have clothes that suits your style and which you&apos;re proud to wear. From women to men.
+                    </p>
+                    <div className="flex space-x-2 mt-5">
+                        <CiTwitter className="text-xl" />
+                        <CiFacebook className="text-xl" />
+                        <FaInstagram className="text-xl" />
+                        <FaGithub className="text-xl" />
+                    </div>
+                </div>
 
-        {/* Divider */}
-        <div className="border-t border-[#0000001A] mt-0 mb-4"></div>
+                {/* Bottom Section */}
+                <div className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 justify-between sm:place-items-start md:place-items-center mt-6 sm:mt-6 md:mt-0">
+                    {/* Box 1 */}
+                    <div className="mt-3">
+                        <h2 className="text-xl sm:text-lg md:text-xl">Company</h2>
+                        <ul className="space-y-1">
+                            <li className="font-sans">About</li>
+                            <li className="font-sans">Features</li>
+                            <li className="font-sans">Works</li>
+                            <li className="font-sans">Career</li>
+                        </ul>
+                    </div>
 
-        {/* Footer Bottom Section */}
-        <div className="flex flex-col-2 lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
-          <div className="font-satoshi text-sm text-[#00000099] text-center lg:text-left">
-            Shop.co © 2000-2023, All Rights Reserved
-          </div>
-          <div className="flex justify-center">
-            <Image
-              src={"/images/paylogo.png"}
-              alt="Payment Logos"
-              height={30}
-              width={281}
-            />
-          </div>
-        </div>
-      </footer>
-    </>
-  );
+                    {/* Box 2 */}
+                    <div>
+                        <h2 className="text-xl sm:text-lg md:text-xl mt-4">Help</h2>
+                        <ul className="space-y-1">
+                            <li className="font-sans">Customer Support</li>
+                            <li className="font-sans">Delivery Details</li>
+                            <li className="font-sans">Terms & Conditions</li>
+                            <li className="font-sans">Privacy Policy</li>
+                        </ul>
+                    </div>
+
+                    {/* Box 3 */}
+                    <div className="space-y-1 mt-4 sm:mt-4 md:mt-0">
+                        <h2 className="text-xl sm:text-lg md:text-xl">FAQ</h2>
+                        <ul>
+                            <li className="font-sans">Account</li>
+                            <li className="font-sans">Manage Deliveries</li>
+                            <li className="font-sans">Orders</li>
+                            <li className="font-sans">Payments</li>
+                        </ul>
+                    </div>
+
+                    {/* Box 4 */}
+                    <div className="space-y-1 mt-5 sm:mt-5 md:mt-0">
+                        <h2 className="text-xl sm:text-lg md:text-xl">Resources</h2>
+                        <ul>
+                            <li className="font-sans">Free eBooks</li>
+                            <li className="font-sans">DevelopmentTutorial</li>
+                            <li className="font-sans">How to - Blog</li>
+                            <li className="font-sans">Youtube Playlist</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            {/* Footer bottom section */}
+            <div className="w-full flex flex-col sm:flex-row md:flex-row items-center lg:items-center pt-12 sm:mt-6 md:mt-7 lg:mt-10 justify-between">
+                <p className="text-xs sm:text-sm md:text-sm lg:text-sm">Shop.co © Made by Faizan Bhatti, All Rights Reserved</p>
+                <div className="flex justify-center mt-5 sm:mt-0 lg:mt-0">
+                    <Image
+                        src={"/images/paylogo.png"}
+                        alt="Payment Logos"
+                        height={30}
+                        width={281}
+                    />
+                </div>
+            </div>
+        </main>
+      </>
+    );
 }
+
+

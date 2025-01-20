@@ -6,7 +6,7 @@ import { RiAccountCircleLine } from "react-icons/ri";
 
 export default function Header() {
   return (
-    <header className="w-full h-[80px] bg-white flex flex-row md:flex-row justify-between items-center">
+    <header className="w-full h-[80px] bg-white flex flex-row sm:flex-row justify-between items-center">
       {/* Left Section */}
       <div className="max-w-[1170px] h-full flex md:flex-row  items-center sm:px-6 md:px-8 lg:px-0 px-18 space-x-3"> {/* Reduced space */}
         <SheetSide />
@@ -19,7 +19,7 @@ export default function Header() {
           <Link href={""}><NavigationMenuDemo /></Link>
           <Link href={""}>On Sale</Link>
           <Link href={""}>New Arrivals</Link>
-          <Link href={""}>Brands</Link>
+          <Link href={"/casual"}>Brands</Link>
         </li>
       </ul>
 
@@ -34,7 +34,10 @@ export default function Header() {
       {/* Icons (Cart, Account) */}
       <div className="flex items-between space-x-5 md:mr-7">
         <IoSearchOutline className="text-xl md:hidden" />
+        <Link href={"/cart"}>
         <IoCartOutline className="text-2xl" />
+        </Link>
+     
         <RiAccountCircleLine className="text-2xl" />
       </div>
       

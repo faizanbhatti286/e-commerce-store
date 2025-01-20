@@ -50,12 +50,12 @@ export default function Customer() {
   };
 
   return (
-    <div className="flex flex-col justify-start items-center m-auto gap-10">
-      <div className="w-full max-w-screen-xl h-[60px] flex justify-between items-center mx-auto px-4">
-        <h4 className="text-[#000000] text-[32px] sm:text-[48px] font-bold">
+    <div className="flex flex-col justify-start items-center mt-20 gap-10">
+      <div className="w-full max-w-screen-xl md:h-[100px] flex justify-between items-center mx-auto px-1 p-7">
+        <h4 className="text-[#000000] text-[36px] sm:text-[50px] sm-pt-2 pl-[-4px] font-extrabold">
           OUR HAPPY CUSTOMERS
         </h4>
-        <div className="flex justify-between items-center gap-2">
+        <div className="flex justify-between items-center gap-2 mt-4">
           <FaArrowLeft
             onClick={handlePrev}
             className={`w-[24px] h-[24px] text-2xl text-gray-700 cursor-pointer ${
@@ -74,18 +74,29 @@ export default function Customer() {
       </div>
 
       {/* Testimonial Cards Section */}
-      <div className="lg:ml-[90px] mt-[50px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
-        {/* Show 3 testimonials per view */}
+      <div className="lg:ml-[20px] mt-[30px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
+        {/* Show up to 3 testimonials per view */}
         {testimonials
           .slice(currentIndex, currentIndex + 3) // Show up to 3 testimonials
           .map((testimonial, index) => (
             <Card
               key={index}
               text={testimonial.text}
-              p={testimonial.p.length > 100 ? `${testimonial.p.slice(0, 100)}...` : testimonial.p} // Limit text length for mobile
+              p={
+                testimonial.p.length > 100
+                  ? `${testimonial.p.slice(0, 100)}...`
+                  : testimonial.p
+              } // Limit text length for mobile
             />
           ))}
       </div>
     </div>
   );
 }
+
+
+
+
+
+
+

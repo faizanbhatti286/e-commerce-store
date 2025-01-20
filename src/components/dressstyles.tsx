@@ -3,10 +3,10 @@ import Image from "next/image";
 
 const DressStyle = () => {
   return (
-    <div className="w-[90%] max-w-[1440px] h-auto mx-auto mt-12 bg-[#F0F0F0] rounded-2xl p-14">
+    <div className="w-[90%] md-w-[1440px] md:h-auto mx-auto mt-12 bg-[#F0F0F0] md:rounded-2xl p-14">
       {/* Heading */}
       <div className="text-center mb-6">
-        <h1 className="font-IntegralCF text-4xl font-extrabold leading-[57.6px] my-12">
+        <h1 className="font-IntegralCF text-4xl  font-extrabold leading-[57.6px] md:my-12">
           BROWSE BY DRESS STYLE
         </h1>
       </div>

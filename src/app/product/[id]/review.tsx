@@ -37,8 +37,7 @@ export default function Review() {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center mx-auto gap-12 px-4 md:px-6">
-      {/* Title Section */}
+    <div className="flex flex-col justify-center items-center mx-auto gap-12 px-4 md:px-6 pt-3">
       <div className="w-full max-w-[1200px] flex justify-start items-center mx-auto mt-8">
         <h4 className="text-[#000000] text-[24px] sm:text-[28px] leading-[36px] font-bold text-left">
           All Reviews
@@ -60,7 +59,7 @@ export default function Review() {
       </div>
 
       {/* Load More Button */}
-      <div className="w-[232px] h-[52px] flex justify-center mt-2">
+      <div className="w-[232px] h-[52px] flex justify-center mt-2Application error: a client-side exception has occurred (see the browser console for more information).">
         <button className="bg-white text-black px-4 py-2 border border-gray-300 rounded-full hover:bg-gray-200">
           Load More Reviews
         </button>
@@ -68,15 +67,4 @@ export default function Review() {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
 
